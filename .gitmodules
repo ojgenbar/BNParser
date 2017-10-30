@@ -1,0 +1,6 @@
+[submodule "RealEstateORM"]
+	path = RealEstateORM
+	url = git@github.com:ojgenbar/RealEstateORM.git
+[submodule "Geocoder"]
+	path = Geocoder
+	url = git@github.com:ojgenbar/Geocoder.git

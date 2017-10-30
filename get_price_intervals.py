@@ -43,10 +43,13 @@ def intervals_from_file(inpath, outpath,  step, start, stop, quantity):
     open(outpath, 'w').write(out)
     return out
 
+
 if __name__ == "__main__":
-    out = intervals_from_file(r'E:\Dropbox\BNParserTask\2017.02.04_07.15\parsed\BNp2_list.pd',
-                                r'BNp2Intervals.set',
-                                1,
-                                500,
-                                100000,
-                                200)
+    out = intervals_from_file(
+        inpath=r'D:\Google Drive\BNParserData\2017.10.24_22.47\parsed\BNp2_list.pd',
+        outpath=r'D:\OneDrive\Programs for Everything\RealEstate_project\BNParser\BNp2Intervals.set',
+        step=1,
+        start=500,
+        stop=100000,
+        quantity=150
+    )

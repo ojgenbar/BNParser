@@ -10,8 +10,7 @@ from BeautifulSoup import *
 import sys
 from exception_str import exception_str
 
-sys.path.append(r'..\Geocoder')
-from Geocoder import Geocoder, GeocoderResult
+from Geocoder.Geocoder import Geocoder
 
 
 class BNParser:
