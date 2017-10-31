@@ -8,7 +8,4 @@
 /WF/
 /.idea/
 /DataAnalysis.py
-/BNParserTask.py
-/BNParserTask2.py
-/BNParserTask_work.py
-/BNParserTask3.py
+/BNParserTask*.py
