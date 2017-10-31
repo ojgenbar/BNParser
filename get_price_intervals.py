@@ -26,16 +26,14 @@ def get_price_intervals(prices, step, start, stop, quantity):
     intervals.append((curstart, stop, curq))
 
     # print sorted(gist_dict.items())[:10]
-    for start, stop, q in intervals:
-        print start, stop, stop-start, q
-    print 'Total:', len(intervals)
+    # for start, stop, q in intervals:
+    #     print start, stop, stop-start, q
+    print 'Total price intervals:', len(intervals)
     return intervals
 
 
-def intervals_from_file(inpath, outpath,  step, start, stop, quantity):
-
-    dump = cPickle.load(open(inpath, 'rb'))
-    prices = [i[13] for i in dump]
+def intervals_from_list(properties_list, outpath,  step, start, stop, quantity):
+    prices = [i[13] for i in properties_list]
     interv = get_price_intervals(prices, step, start, stop, quantity)
     out = ''
     for row in interv:
@@ -44,8 +42,22 @@ def intervals_from_file(inpath, outpath,  step, start, stop, quantity):
     return out
 
 
+def intervals_from_file(inpath, outpath,  step, start, stop, quantity):
+
+    dump = cPickle.load(open(inpath, 'rb'))
+    out = intervals_from_list(
+        properties_list=dump,
+        outpath=outpath,
+        step=step,
+        start=start,
+        stop=stop,
+        quantity=quantity
+    )
+    return out
+
+
 if __name__ == "__main__":
-    out = intervals_from_file(
+    outs = intervals_from_file(
         inpath=r'D:\Google Drive\BNParserData\2017.10.24_22.47\parsed\BNp2_list.pd',
         outpath=r'D:\OneDrive\Programs for Everything\RealEstate_project\BNParser\BNp2Intervals.set',
         step=1,
