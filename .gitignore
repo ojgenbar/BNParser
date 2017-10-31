@@ -198,7 +198,6 @@ var/
 sdist/
 develop-eggs/
 uploads/
-wf/
 .installed.cfg
 
 # Installer logs
